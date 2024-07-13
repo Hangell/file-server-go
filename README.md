@@ -1,54 +1,54 @@
 
-# Servidor HTTP Básico para compartilhar file server com Autenticação
+# Basic HTTP Server to Share File Server with Authentication
 
-Este é um simples servidor HTTP escrito em Go que serve arquivos de um diretório específico e utiliza autenticação básica.
+This is a simple HTTP server written in Go that serves files from a specific directory and uses basic authentication.
 
-## Pré-requisitos
+## Prerequisites
 
-- Go instalado (versão 1.16 ou superior)
+- Go installed (version 1.16 or higher)
 
-## Instalação
+## Installation
 
-Clone este repositório e navegue até o diretório do projeto:
-
-```sh
-git clone <URL_DO_REPOSITORIO>
-cd <NOME_DO_DIRETORIO>
-```
-
-## Uso
-
-Compile e execute o servidor com o seguinte comando:
+Clone this repository and navigate to the project directory:
 
 ```sh
-go run main.go <diretorio> <porta>
+git clone <REPOSITORY_URL>
+cd <DIRECTORY_NAME>
 ```
 
-- `<diretorio>`: O diretório que você deseja servir.
-- `<porta>`: A porta na qual o servidor irá rodar.
+## Usage
 
-### Exemplo
+Compile and run the server with the following command:
 
-Para servir o diretório `public` na porta `8080`, execute:
+```sh
+go run main.go <directory> <port>
+```
+
+- `<directory>`: The directory you want to serve.
+- `<port>`: The port on which the server will run.
+
+### Example
+
+To serve the `public` directory on port `8080`, run:
 
 ```sh
 go run main.go public 8080
 ```
 
-## Autenticação
+## Authentication
 
-Este servidor usa autenticação básica para proteger o acesso aos arquivos servidos. As credenciais padrão são:
+This server uses basic authentication to protect access to the served files. The default credentials are:
 
-- Usuário: `admin`
-- Senha: `teste`
+- User: `admin`
+- Password: `test`
 
-### Como alterar as credenciais
+### How to Change the Credentials
 
-Para alterar as credenciais, você precisará modificar a função `Secret` no código fonte (`main.go`). A função `Secret` é responsável por retornar o hash da senha para um dado usuário. O hash da senha pode ser gerado utilizando [esta ferramenta](https://unix4lyfe.org/crypt/).
+To change the credentials, you will need to modify the `Secret` function in the source code (`main.go`). The `Secret` function is responsible for returning the password hash for a given user. The password hash can be generated using [this tool](https://unix4lyfe.org/crypt/).
 
-### Função Secret
+### Secret Function
 
-A função `Secret` verifica o usuário e retorna o hash da senha correspondente. No exemplo fornecido:
+The `Secret` function checks the user and returns the corresponding password hash. In the provided example:
 
 ```go
 func Secret(user, realm string) string {
@@ -59,15 +59,15 @@ func Secret(user, realm string) string {
 }
 ```
 
-Se você deseja adicionar mais usuários ou alterar a senha, gere um novo hash e substitua o valor na função `Secret`.
+If you want to add more users or change the password, generate a new hash and replace the value in the `Secret` function.
 
-## Estrutura do Código
+## Code Structure
 
-- `main.go`: Arquivo principal que contém a implementação do servidor HTTP com autenticação básica.
+- `main.go`: Main file that contains the implementation of the HTTP server with basic authentication.
 
-## Dependências
+## Dependencies
 
-Este projeto utiliza o pacote `go-http-auth` para gerenciamento de autenticação. Certifique-se de instalar as dependências com o comando:
+This project uses the `go-http-auth` package for authentication management. Make sure to install the dependencies with the command:
 
 ```sh
 go get -u github.com/abbot/go-http-auth
@@ -75,7 +75,7 @@ go get -u github.com/abbot/go-http-auth
 
 ## Log
 
-O servidor logará a porta em que está rodando e qualquer erro que ocorra durante a execução.
+The server will log the port it is running on and any errors that occur during execution.
 
 ## Contributing
 Contributions are welcome! If you have any improvements or new features you'd like to add to Laima, please follow these steps:
@@ -88,10 +88,10 @@ Contributions are welcome! If you have any improvements or new features you'd li
 
 * Please ensure that your code follows the established coding conventions and includes appropriate tests for any new functionality.
 
-## Licença
-Laima is licensed under the MIT license. Please refer to the LICENSE file for more information.
+## License
+*File Server* is licensed under the MIT license. Please refer to the LICENSE file for more information.
 
-## Doações
+## Donations
 If you enjoyed using Laima, please consider making a donation to support the continuous development of the project. You can make a donation using one of the following options:
 * Pix: rodrigo@hangell.org
 
