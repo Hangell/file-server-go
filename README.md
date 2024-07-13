@@ -16,6 +16,22 @@ git clone <REPOSITORY_URL>
 cd <DIRECTORY_NAME>
 ```
 
+## Code Structure
+
+```cmd
+/shared-files-server
+│   auth.go
+│   go.mod
+│   go.sum
+│   main.go
+│   README.md
+│   server.go
+```
+- `auth.go`: Contains the authentication logic. The `Secret` function validates user credentials, and `NewAuthenticator` creates a new BasicAuthenticator.
+- `main.go`: The entry point of the program. It processes command-line arguments, creates the authenticator, and starts the server.
+- `server.go`: Contains the server logic. The `StartServer` function configures and starts the HTTP server.
+
+
 ## Usage
 
 Compile and run the server with the following command:
@@ -29,22 +45,22 @@ go run main.go <directory> <port>
 
 ### Example
 
-To serve the `public` directory on port `8080`, run:
+To serve the `public` directory on port `9000`, run:
 
 ```sh
-go run main.go public 8080
+go run main.go public 9000
 ```
 
 ## Authentication
 
 This server uses basic authentication to protect access to the served files. The default credentials are:
 
-- User: `admin`
-- Password: `test`
+- User: `admin` | `dev` | `user`
+- Password: `teste`
 
 ### How to Change the Credentials
 
-To change the credentials, you will need to modify the `Secret` function in the source code (`main.go`). The `Secret` function is responsible for returning the password hash for a given user. The password hash can be generated using [this tool](https://unix4lyfe.org/crypt/).
+To change the credentials, you will need to modify the `Secret` function in the source code (`auth.go`). The `Secret` function is responsible for returning the password hash for a given user. The password hash can be generated using [this tool](https://unix4lyfe.org/crypt/).
 
 ### Secret Function
 
@@ -52,7 +68,7 @@ The `Secret` function checks the user and returns the corresponding password has
 
 ```go
 func Secret(user, realm string) string {
-    if user == "admin" {
+    if user == "admin" || user == "dev" || user == "user" {
         return "$1$/q9tTBog$KtdXn0eQTpiUP9g//xLaS1" //https://unix4lyfe.org/crypt/ MD5 Crypt: md5 salt
     }
     return ""
@@ -60,10 +76,6 @@ func Secret(user, realm string) string {
 ```
 
 If you want to add more users or change the password, generate a new hash and replace the value in the `Secret` function.
-
-## Code Structure
-
-- `main.go`: Main file that contains the implementation of the HTTP server with basic authentication.
 
 ## Dependencies
 
@@ -78,7 +90,7 @@ go get -u github.com/abbot/go-http-auth
 The server will log the port it is running on and any errors that occur during execution.
 
 ## Contributing
-Contributions are welcome! If you have any improvements or new features you'd like to add to Laima, please follow these steps:
+Contributions are welcome! If you have any improvements or new features you'd like to add to this project, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or improvement.
@@ -92,20 +104,16 @@ Contributions are welcome! If you have any improvements or new features you'd li
 *File Server* is licensed under the MIT license. Please refer to the LICENSE file for more information.
 
 ## Donations
-If you enjoyed using Laima, please consider making a donation to support the continuous development of the project. You can make a donation using one of the following options:
+If you enjoyed using this project, please consider making a donation to support the continuous development of the project. You can make a donation using one of the following options:
 * Pix: rodrigo@hangell.org
-
-* Cryptocurrencies or nft MetaMask: 0xEd4d1be72F807Faa358C966a8eF63367c200130F
+* Cryptocurrencies or NFT MetaMask: 0xEd4d1be72F807Faa358C966a8eF63367c200130F
 
 ![Created By](https://media.licdn.com/dms/image/D4D03AQF0vBM0rLZMKg/profile-displayphoto-shrink_200_200/0/1704050191664?e=1726099200&v=beta&t=JiPipqyppQaj1f6tR6tI2cMojmCAgJFQXkJgZdAZKqk)
-
-
 
 <div>
   <a href="https://hangell.org" target="_blank"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" target="_blank"></a>
   <a href="https://play.google.com/store/apps/dev?id=5606456325281613718" target="_blank"><img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white" target="_blank"></a>
   <a href="https://www.youtube.com/channel/UC8_zG7RFM2aMhI-p-6zmixw" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
-  <a href="https://www.facebook.com/hangell.org" target="_blank"><img src="	https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" target="_blank"></a>
+  <a href="https://www.facebook.com/hangell.org" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" target="_blank"></a>
   <a href="https://www.linkedin.com/in/rodrigo-rangel-a80810170" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-
 </div>
