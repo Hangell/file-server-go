@@ -108,12 +108,30 @@ If you enjoyed using this project, please consider making a donation to support 
 * Pix: rodrigo@hangell.org
 * Cryptocurrencies or NFT MetaMask: 0xEd4d1be72F807Faa358C966a8eF63367c200130F
 
-![Created By](https://media.licdn.com/dms/image/D4D03AQF0vBM0rLZMKg/profile-displayphoto-shrink_200_200/0/1704050191664?e=1726099200&v=beta&t=JiPipqyppQaj1f6tR6tI2cMojmCAgJFQXkJgZdAZKqk)
+## 👨‍💻 Author
 
-<div>
-  <a href="https://hangell.org" target="_blank"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" target="_blank"></a>
-  <a href="https://play.google.com/store/apps/dev?id=5606456325281613718" target="_blank"><img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white" target="_blank"></a>
-  <a href="https://www.youtube.com/channel/UC8_zG7RFM2aMhI-p-6zmixw" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
-  <a href="https://www.facebook.com/hangell.org" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/rodrigo-rangel-a80810170" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+**Rodrigo Rangel**
+
+<div align="left">
+  <a href="https://hangell.org" target="_blank">
+    <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Website" />
+  </a>
+  <a href="https://play.google.com/store/apps/dev?id=5606456325281613718" target="_blank">
+    <img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white" alt="Google Play" />
+  </a>
+  <a href="https://www.youtube.com/channel/UC8_zG7RFM2aMhI-p-6zmixw" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+  </a>
+  <a href="https://www.facebook.com/hangell.org" target="_blank">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
+  </a>
+  <a href="https://www.linkedin.com/in/rodrigo-rangel-a80810170" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
 </div>
+
+---
+
+<p align="center">
+  Made with ❤️ for the developer community
+</p>
