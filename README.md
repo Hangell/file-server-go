@@ -1,4 +1,3 @@
-
 # Basic HTTP Server to Share File Server with Authentication
 
 This is a simple HTTP server written in Go that serves files from a specific directory and uses basic authentication.
@@ -111,7 +110,6 @@ If you enjoyed using this project, please consider making a donation to support 
 ## 👨‍💻 Author
 
 <div align="center">
-
 ![Rodrigo Rangel](https://avatars.githubusercontent.com/u/53544561?v=4)
 
 **Rodrigo Rangel**
